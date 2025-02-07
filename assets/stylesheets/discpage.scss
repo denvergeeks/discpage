@@ -1,5 +1,5 @@
 /*******************************************************************************
-	Adapt Discourse to DiscPage layouts
+	Adapt Discourse to DiscPage layouts / JENS MODS at Bottom
 *******************************************************************************/
 
 /* Disable centered header */
@@ -596,4 +596,46 @@ html.dpg .d-editor-preview .dpg-balloon-text:after {
   margin-left: 5px;
 }
 
-/******************************************************************************/
+/******JENS DISCPAGE MODS************************************************************************/
+
+/* DiscPage */
+
+html.dpg.dpg-topic .post-stream .topic-body {
+  width: -webkit-fill-available;
+}
+
+html.dpg.dpg-topic #topic-title #dpg-back a {
+    /* background-color: var(--tertiary);
+        opacity: .5; */
+    background-color: var(--tertiary-low);
+    color: var(--tertiary);
+    padding: 4px 7px;
+    border-radius: 5px;
+}
+
+/* TC Custom Embedded Replies Overrides */
+
+.embedded-posts.bottom {
+    max-width: calc(100% - 96px);
+}
+
+nav.post-controls .actions {
+  /* overflow-x: unset !important; */
+  padding:10px;
+}
+
+.topic-post nav.post-controls .show-replies,
+.topic-post nav.post-controls .show-replies:hover {
+    /* background-color: var(--tertiary);
+        opacity: .5; */
+    background-color: var(--tertiary-low);
+    color: var(--tertiary);
+    padding: 5px;
+    border-radius: 5px;
+        border: 2px solid var(--primary-300);
+}
+
+nav.post-controls .show-replies .d-button-label+.d-icon,
+nav.post-controls .show-replies[aria-expanded=true] .d-icon {
+    color: var(--tertiary);
+}
